@@ -1,19 +1,19 @@
-'use strict';
+	'use strict';
 
-angular.module('teamApp')
-  .directive('dvHover', function () {
-    return {
-      restrict: 'A',
-      link: function postLink(scope, element, attrs) {
-        element.hover(function(){
-        	element.css('color', attrs.dvHover);
-        });
-		// $(selector).hover(handlerInOut)
-       
-  //       element.text('this is the dvHover directive');
-      }
-    };
-  });
+	angular.module('teamApp')
+	  .directive('dvHover', function () {
+	    return {
+	      restrict: 'A',
+	      link: function postLink(scope, element, attrs) {
+	        element.hover(function(){
+	        	element.css('color', attrs.dvHover);
+	        });
+			// $(selector).hover(handlerInOut)
+	       
+	  //       element.text('this is the dvHover directive');
+	      }
+	    };
+	  });
 
 // 'use strict';
 
