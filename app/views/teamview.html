@@ -1,2 +1,11 @@
-<p>This is the TeamView view.</p>
+<p dv-color="gold">This is the TeamView view.</p>
+    <li ng-repeat="character in team.characters" dv-color="green">
+        <dv-append text="{{ character.name }}" append="is a filthy animal.">Jabberwocky</dv-append>
+	</li>
+	<div dv-table= 'characters' dv-table-headers="['id', 'name']"></div>
+</ul>
+
+<hr>
+	
+<a ui-sref="main">Back To Main</a>
 

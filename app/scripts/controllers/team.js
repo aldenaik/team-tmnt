@@ -1,10 +1,11 @@
-'use strict';
+	'use strict';
 
 angular.module('teamApp')
-  .controller('TeamCtrl', function ($scope, teams) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('TeamCtrl', function ($scope, team) {
+    $scope.team = team;
+    angular.forEach($scope.team, function(value){
+    	$scope.characters = value;
+
+    });
   });
+

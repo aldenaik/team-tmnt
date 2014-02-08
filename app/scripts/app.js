@@ -1,9 +1,6 @@
-'use strict';
+	'use strict';
 
-angular.module('teamApp', [
-	'ui.router'
-	])
-.config(function($stateProvider, $urlRouterProvider) {
+angular.module('teamApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise("/");
 		$stateProvider
 		    .state('main', {
@@ -17,14 +14,17 @@ angular.module('teamApp', [
 		      }
 		    })
 		    .state('team', {
-		      url: "/teamview",
+		      url: "/teamview/:teamId",
 		      controller: 'TeamCtrl',
 		      templateUrl: "views/teamview.html",
 		      resolve:{
-		      	'teams': function($stateParams, TurtleService){
-		      		return TurtleService.getTeams($stateParams.teamId);
+		      	team: function($stateParams, TurtleService){
+		      		return TurtleService.getTeam($stateParams.teamId);
 		  		}
 			  }
 		     });
 		  
 		    });
+
+
+
